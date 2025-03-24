@@ -17,6 +17,7 @@ body {
   width: 100%;
   height: 100%;
   position: relative;
+  overflow: hidden;
 }
 
 .overlay {
@@ -181,10 +182,18 @@ body {
   }
 }
 
-.container {
+.wrap {
   position: absolute;
-  top: 10%;
-  left: 30%;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
   min-width: 300px;
   max-width: 800px;
   padding: 15px;
@@ -210,12 +219,13 @@ body {
 }
 
 .time-container {
+  font-size: 32px;
+  font-weight: bold;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  font-size: 32px;
-  font-weight: bold;
 }
 
 .button-container button {
@@ -230,14 +240,76 @@ body {
   cursor: pointer;
 }
 
-.button-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
 }
 
-.history-container li{
-    list-style: none;
-    font-size: 16px;
+.history-container ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.history-container li {
+  list-style: none;
+  font-size: 16px;
+}
+
+#inputSec {
+  width: 60px;
+  height: 35px;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  background: black;
+  border: 2px solid #16213e;
+  color: #ef565f;
+  text-align: center;
+}
+
+input:focus {
+  outline: none;
+}
+
+#inputMin {
+  width: 60px;
+  height: 35px;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  background: black;
+  border: 2px solid #16213e;
+  color: #ef565f;
+  text-align: center;
+}
+
+#setTime {
+  padding: 5px 8px;
+  background: rgb(216, 60, 8);
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.inputGroup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.inputGroup{
+    display: none;
+}
+
+#timer-button-container{
+    display: none;
 }

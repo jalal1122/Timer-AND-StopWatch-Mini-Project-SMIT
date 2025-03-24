@@ -11,31 +11,43 @@
       <div class="overlay"></div>
       <div class="overlay2"></div>
     </div>
-    <div class="container">
-      <div class="heading-container">
-        <label class="switch-button" for="switch">
-          <div class="switch-outer">
-            <input id="switch" type="checkbox" />
-            <div class="button">
-              <span class="button-toggle"></span>
-              <span class="button-indicator"></span>
+    <div class="wrap">
+      <div class="container">
+        <div class="heading-container">
+          <label class="switch-button" for="switch">
+            <div class="switch-outer">
+              <input id="switch" type="checkbox" />
+              <div class="button">
+                <span class="button-toggle"></span>
+                <span class="button-indicator"></span>
+              </div>
             </div>
+          </label>
+          <h1>Stop Watch ⏱️</h1>
+        </div>
+        <div class="time-container">
+          <div id="time">00 : 00</div>
+          <div class="inputGroup">
+            <input type="text" id="inputSec" />
+            <input type="text" id="inputMin" />
+            <button id="setTime">Set Time</button>
           </div>
-        </label>
-        <h1>Stop Watch ⏱️</h1>
-      </div>
-      <div class="time-container">
-        <div id="time">00 : 00</div>
-      </div>
-      <div class="button-container">
-        <button id="start">Start</button>
-        <button id="stop">Stop</button>
-        <button id="reset">Reset</button>
-      </div>
-      <div class="history-container">
-        <h2>History</h2>
-        <ul id="history">
-        </ul>
+          <div>Sec : Min</div>
+        </div>
+        <div class="button-container">
+          <button id="start">Start</button>
+          <button id="stop">Stop</button>
+          <button id="reset">Reset</button>
+        </div>
+        <div class="button-container" id="timer-button-container">
+            <button id="timer-start">Start</button>
+            <button id="timer-stop">Stop</button>
+            <button id="timer-reset">Reset</button>
+          </div>
+        <div class="history-container">
+          <h2>History</h2>
+          <ul id="history"></ul>
+        </div>
       </div>
     </div>
   </body>
