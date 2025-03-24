@@ -80,6 +80,7 @@ checkbox.addEventListener("change", () => {
 
 // event listeners for the start button on stopwatch
 startBtn.addEventListener("click", () => {
+  if (timeRun) return; // if the timeRun is not null, return the function
   // set the interval to run every second
   timeRun = setInterval(() => {
     // increment the seconds
@@ -138,12 +139,13 @@ setTimeBtn.addEventListener("click", () => {
 
 // event listener for the start button on timer
 document.getElementById("timer-start").addEventListener("click", () => {
+  if (timeRun) return; // if the timeRun is not null, return
   // set the interval to run every second
   timeRun = setInterval(() => {
     // decrement the seconds
     inputSeconds--;
     // if the seconds reach 0, decrement the minutes and reset the seconds in dom
-    if (inputSeconds == 0 && inputMinutes == 0) {
+    if (inputSeconds <= 0 && inputMinutes <= 0) {
       // clear the interval
       clearInterval(timeRun);
       // set the time in dom to 00 : 00
